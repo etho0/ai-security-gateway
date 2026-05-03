@@ -5,9 +5,12 @@ import json
 import pandas as pd
 import re
 from datetime import datetime
+from dotenv import load_dotenv
 
 # ===== CONFIG =====
+load_dotenv()
 API_KEY = os.getenv("OPENROUTER_API_KEY")
+
 if not API_KEY:
     st.error("❌ Please set OPENROUTER_API_KEY environment variable.")
     st.stop()
