@@ -89,12 +89,26 @@ git clone https://github.com/etho0/ai-security-gateway.git
 cd ai-security-gateway
 ```
 
-### 2. Install dependencies
+### 2. Create virtual environment
+```bash
+python3 -m venv venv
+```
+
+### 3. Activate it
+```bash
+# Mac/Linux
+source venv/bin/activate
+
+# Windows
+venv\Scripts\activate
+```
+
+### 4. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Set your API key
+### 5. Set your API key
 ```bash
 cp .env.example .env
 # Edit .env and add your OpenRouter API key
@@ -102,7 +116,7 @@ cp .env.example .env
 
 Get a free API key at **https://openrouter.ai/keys**
 
-### 4. Run
+### 6. Run
 ```bash
 streamlit run app.py
 ```
