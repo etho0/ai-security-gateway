@@ -1,6 +1,25 @@
+# API keys — never commit
 .env
+
+# Runtime logs — contain user inputs
+security_log.jsonl
 *.jsonl
+
+# Python
 __pycache__/
-.DS_Store
-logs/*.jsonl
+*.pyc
+*.pyo
+*.pyd
+.Python
 venv/
+env/
+.venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.git
