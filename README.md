@@ -95,6 +95,14 @@ The shared component is the prompt guard — both modes run it. The difference i
 
 ---
 
+## 🗺️ Data Flow Diagram
+
+![AI Security Gateway — Data Flow](docs/data_flow.svg)
+
+Both modes share the same prompt guard. After a clean prompt, **Secure mode** hands off to Llama for chat. **MCP Agent mode** hands off to Claude Haiku with filesystem tools — every tool call it makes is intercepted by `mcp_policy.evaluate()` before the filesystem server executes anything.
+
+---
+
 ## ✨ Features
 
 **Secure mode**
